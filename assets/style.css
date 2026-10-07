@@ -38,8 +38,22 @@ h1 {
 }
 
 .library {
-  border: 2px solid var(--accent-colour);
+  border: .25rem solid var(--accent-colour);
   flex: 1;
   min-width: 100%;
   padding: 2rem;
+  margin-bottom: 1vh;
+
+  display: grid;
+}
+
+button {
+  align-self: stretch;
+  min-height: 3vh;
+
+  font-size: larger;
+}
+
+button:hover {
+  cursor: pointer;
 }
