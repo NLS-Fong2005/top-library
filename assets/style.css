@@ -10,9 +10,10 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Clarity City', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Clarity City', Arial, Helvetica, sans-serif;
+  color: var(--primary-text-colour);
 }
 
 html {
@@ -20,17 +21,13 @@ html {
 }
 
 body {
+  align-items: center;
   display: flex;
   flex-flow: column wrap;
-  align-items: center;
   margin: 10%;
   min-height: 60vh;
 
   /* border: 2px solid greenyellow; */
-}
-
-h1 {
-  color: var(--primary-text-colour);
 }
 
 .title {
@@ -40,18 +37,36 @@ h1 {
 .library {
   border: .25rem solid var(--accent-colour);
   flex: 1;
+  margin-bottom: 1vh;
   min-width: 100%;
   padding: 2rem;
-  margin-bottom: 1vh;
 
+  /* Gridbox stuff, 4 x n. */
+  /* Scrollable */
   display: grid;
+  overflow: auto;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.library > * {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  border: solid var(--accent-colour);
+  
+  border-width: .25rem 0 .25rem .25rem;
+}
+
+.library > div:nth-child(4n) {
+  border-right: .25rem solid var(--accent-colour);
 }
 
 button {
   align-self: stretch;
-  min-height: 3vh;
-
+  color: var(--background-colour);
   font-size: larger;
+  min-height: 3vh;
 }
 
 button:hover {
