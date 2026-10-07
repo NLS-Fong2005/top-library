@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Clarity+City:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --background-colour: #121212;
+  --primary-text-colour: #E0E0E0;
+  --secondary-text-colour: #B0B0B0;
+  --border-colour: #444444;
+  --accent-colour: #888888;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Clarity City', Arial, Helvetica, sans-serif;
 }
